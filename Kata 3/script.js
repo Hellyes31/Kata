@@ -11,12 +11,33 @@ const calendrierDuCrayon = {
     juin: 1,
 };
 
-let startRoof = "  /\\\n /__\\";
-let stage = " ||||"
+let pointPen = "  /\\\n /__\\";
+let pen = " ||||"
+let  stageEraser = " |  |"
+let endEraser = " |__|"
 
-function drawMyPen(){
+function drawMyPen(month){
 
-    console.log(startRoof)
-    console.log(stage)
+    console.log(pointPen)
+
+    let numberOfStage = calendrierDuCrayon[month]
+
+    for (let i = 0; i < numberOfStage; i++){
+        console.log(pen);
+    }
+    console.log(endEraser)
+
+    if (numberOfStage > 4){
+        console.log(stageEraser)
+    }
+
+    console.log(endEraser)
+
 }
-drawMyPen()
+drawMyPen("decembre")
+
+drawMyPen("septembre")
+
+drawMyPen ("mars")
+
+drawMyPen ("juin")
